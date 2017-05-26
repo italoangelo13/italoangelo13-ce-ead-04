@@ -43,12 +43,14 @@
     font-weight: 500;
 }
 .img-loja{
-    width: 30%;
-    border: 2px solid #000;
+    width: 80%;
 }
 
 .img-loja:hover{
-    -moz-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -o-transform: scale(1.5);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    border: 2px solid #c0c0c0;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.7);
+    border-radius: 5px;
 }
