@@ -65,9 +65,12 @@ $resultado = $mysqli->query($sqlBuscaLivros);
 
 
             <div class="row">
-                <h1 class="col-lg-12 alert alert-success" style="text-align: center;">
+                <h1 class="col-lg-8 alert alert-success" style="text-align: center;">
                     Os Melhores Livros, pelos menores preços!
                 </h1>
+                <div class="col-lg-4">
+                    <h3>Carrinho:</h3>
+                </div>
             </div>
 
 
@@ -92,7 +95,7 @@ $resultado = $mysqli->query($sqlBuscaLivros);
                             $categoria = $dados['categoria'];
                             $autor = $dados['autor'];
                             $imagem = $dados['imagem'];
-                            $preco = $dados['preco'];
+                            $preco = number_format($dados['preco'], 2, ',','.');
                             $quant = $dados['qtde'];
                             ?>
 
@@ -101,11 +104,11 @@ $resultado = $mysqli->query($sqlBuscaLivros);
                                 <td scope="row"><center><h4><?php echo $titulo; ?></h4></center></td>
                                 <td><center><h4><?php echo $autor; ?></h4></center></td>
                                 <td><center><h4><?php echo $categoria; ?></h4></center></td>
-                                <td><center><h4><?php echo $preco; ?></h4></center></td>
+                                <td><center><h4>R$<?php echo $preco; ?></h4></center></td>
                                 <td><center><h4><?php echo $quant; ?></h4></center></td>
                                 <td><center><h4>
                                     <form>
-                                        <input style="width: 70px;" class="form-control-sm" type="number" name="quant" placeholder="0" /> <button class="btn btn-outline-success" type="submit" >Adcionar ao Carrinho </button>     
+                                        <input style="width: 70px;" class="form-control-sm" type="number" name="quant" placeholder="0" min="0" max="<?php echo $quant; ?>" /> <button class="btn btn-outline-success" type="submit" >Adcionar ao Carrinho </button>     
                                     </form>
                                 </h4></center></td>
                             </tr>
