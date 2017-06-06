@@ -91,6 +91,7 @@ $resultado = $mysqli->query($sqlBuscaLivros);
                     <tbody>
                         <?php
                         while ($dados = $resultado->fetch_assoc()) {
+                            $cod = $dados['codigo'];
                             $titulo = $dados['titulo'];
                             $categoria = $dados['categoria'];
                             $autor = $dados['autor'];
@@ -107,7 +108,12 @@ $resultado = $mysqli->query($sqlBuscaLivros);
                                 <td><center><h4>R$<?php echo $preco; ?></h4></center></td>
                                 <td><center><h4><?php echo $quant; ?></h4></center></td>
                                 <td><center><h4>
-                                    <form>
+                                        <form action="carrinho.php" method="get">
+                                            <input type="hidden" name="cod" value="<?php echo $cod; ?>" />
+                                            <input type="hidden" name="titulo" value="<?php echo $titulo; ?>" />
+                                            <input type="hidden" name="autor" value="<?php echo $autor; ?>" />
+                                            <input type="hidden" name="img" value="<?php echo $imagem; ?>" />
+                                            <input type="hidden" name="preco" value="<?php echo $preco; ?>" />
                                         <input style="width: 70px;" class="form-control-sm" type="number" name="quant" placeholder="0" min="0" max="<?php echo $quant; ?>" /> <button class="btn btn-outline-success" type="submit" >Adcionar ao Carrinho </button>     
                                     </form>
                                 </h4></center></td>
