@@ -196,7 +196,6 @@ $resultadoCat = $mysqli->query($sqlCategoria);
                                 <th><center>Preço</center></th>
                                 <th><center>Quantidade</center></th>
                                 <th><center>Imagem</center></th>
-                                <th><center>Editar</center></th>
                                 <th><center>Excluir</center></th>
                                 </tr>
                                 </thead>
@@ -219,7 +218,6 @@ $resultadoCat = $mysqli->query($sqlCategoria);
                                             <td><h4>R$<?php echo $preco; ?></h4></td>
                                             <td><h4><?php echo $quant; ?></h4></td>
                                             <td><center><img src="<?php echo $imagem; ?>" width="70%"/></center></td>
-                                    <td><h4><a href="#?cod=<?php echo $cod; ?>">Editar</a></h4></td>
                                     <td><h4><a href="javascript:func()" onclick="confirmacao('<?php echo $cod; ?>')">Excluir</a></h4></td>
                                     </tr>
                                     <?php

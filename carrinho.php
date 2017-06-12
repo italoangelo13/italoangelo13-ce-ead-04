@@ -71,7 +71,10 @@ if (!isset($_SESSION['carrinho'][$cod])) {
                     </div>
                 </div>
             </div>
-
+            
+            <div class="row">
+                <h3 class="alert bg-success col-lg-12">Carrinho de Compras</h3>
+            </div>
             <div class="row">
                 <table class="table table-striped col-12">
                     <thead>

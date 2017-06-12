@@ -75,20 +75,6 @@
                       <p class="card-text texto">Gerenciar Livros</p>
                   </div>
                 </div>
-                
-                <div class="card col-lg-3 bloco">
-                    <a href="usuarios.php" /><center><img class="card-img-top" src="imagens/usuario.png" alt="Gerenciar usuarios" width="95%"></center>
-                  <div class="card-block caixa-texto">
-                      <p class="card-text texto">Gerenciar Usuarios</p>
-                  </div>
-                </div>
-                
-                <div class="card col-lg-3 bloco">
-                    <a href="clientes.php" /><center><img class="card-img-top" src="imagens/cliente.png" alt="Gerenciar Clientes" width="95%"></center>
-                  <div class="card-block caixa-texto">
-                      <p class="card-text texto">Gerenciar Clientes</p>
-                  </div>
-                </div>
             </div>
 
             <footer class="row footer">
